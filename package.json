@@ -3,6 +3,7 @@
     "version": "0.1.0",
     "description": "Authentication plugin for ifnode",
     "main": "index.js",
+
     "keywords": [
         "auth",
         "authenticate"
@@ -11,8 +12,17 @@
     "license": "MIT",
 
     "dependencies": {
-        "debug": "latest",
+        "debug": "2.2.x",
         "lodash": "3.9.x",
-        "passport": "0.x.x"
+        "passport": "0.2.x"
+    },
+    "devDependencies": {
+        "supertest": "1.x.x",
+        "mocha": "2.x.x",
+        "should": "6.x.x",
+
+        "ifnode": "git://github.com/ilfroloff/ifnode.git#bf0ba5fdac",
+        "express-session": "1.11.x",
+        "passport-local": "1.0.x"
     }
 }

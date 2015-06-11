@@ -41,3 +41,11 @@ Run server
     
     app.register('ifnode-auth');
     app.run();
+
+
+# Test
+
+    cd node_modules/ifnode-auth
+    npm install
+    mocha
+    
