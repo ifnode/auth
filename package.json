@@ -1,6 +1,6 @@
 {
     "name": "ifnode-auth",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Authentication plugin for ifnode",
     "main": "index.js",
 
