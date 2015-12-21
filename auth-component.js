@@ -83,7 +83,7 @@ module.exports = function(app, Component) {
 
                 self.user_role_field = webuser_model.user_role_field || webuser_model.userRoleField;
                 push(auth_roles, roles);
-                _initialize_passport.call(this, webuser_strategies);
+                _initialize_passport.call(self, webuser_strategies);
             });
         } else {
             push(auth_roles, webuser_model.roles);

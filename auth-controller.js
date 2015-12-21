@@ -19,14 +19,14 @@ module.exports = function(app, Controller) {
 
     Controller.process_config(function(controller_config) {
         var process = function(options, default_options) {
-                if(!options) {
-                    options = default_options;
-                } else if(!Array.isArray(options)) {
-                    options = [options];
-                }
+            if(!options) {
+                options = default_options;
+            } else if(!Array.isArray(options)) {
+                options = [options];
+            }
 
-                return options;
-            };
+            return options;
+        };
 
         controller_config.access = process(controller_config.access, [this.default_role]);
         controller_config.only =   process(controller_config.only, [this.default_role]);
