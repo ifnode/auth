@@ -1,6 +1,7 @@
 'use strict';
 
 var _ = require('lodash'),
+    _cloneDeep = require('lodash/lang/cloneDeep'),
     passport = require('passport'),
 
     error = function(message) {
@@ -34,7 +35,11 @@ module.exports = function(app, Component) {
                 error('Cannot find passport Strategy for [' + module_name + ']');
             }
 
-            passport.use(new strategy(config, process));
+            /**
+             *
+             * Configuration is deep freezed but some passport modules redefine configuration. So there is deep cloning
+             */
+            passport.use(new strategy(_cloneDeep(config), process));
         },
         _initialize_passport = function(webuser_strategies) {
             var supported_strategies = this.config,
