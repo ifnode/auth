@@ -3,6 +3,9 @@
     "version": "0.1.2",
     "description": "Authentication plugin for ifnode",
     "main": "index.js",
+    "scripts": {
+        "test": "./node_modules/mocha/bin/mocha --ui bdd --check-leaks"
+    },
 
     "keywords": [
         "auth",
@@ -12,17 +15,16 @@
     "license": "MIT",
 
     "dependencies": {
-        "debug": "2.2.x",
-        "lodash": "3.9.x",
-        "passport": "0.2.x"
+        "debug": "2.6.8",
+        "lodash": "3.9.3",
+        "passport": "0.3.2"
     },
     "devDependencies": {
-        "supertest": "1.x.x",
-        "mocha": "2.x.x",
-        "should": "6.x.x",
+        "supertest": "3.0.0",
+        "mocha": "3.4.2",
+        "should": "11.2.1",
 
-        "ifnode": "git://github.com/ilfroloff/ifnode.git#bf0ba5fdac",
-        "express-session": "1.11.x",
-        "passport-local": "1.0.x"
+        "ifnode": "1.6.6",
+        "passport-local": "1.0.0"
     }
 }
